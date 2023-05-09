@@ -4,8 +4,8 @@ import apiDataSource from './datasource';
 export default async function connectDB() {
   const connection = await apiDataSource.initialize();
 
-  if (!connection) throw new Error('Failed to establish DB connection!');
+  if (!connection) throw new Error('[DB]: Failed to establish DB connection!');
 
-  console.log('DB connection established successfully!');
+  console.log('[DB]: DB connection established successfully!');
   return connection;
 }
